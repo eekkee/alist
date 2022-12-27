@@ -10,6 +10,6 @@ LABEL MAINTAINER="i@nn.ci"
 VOLUME /opt/alist/data/
 WORKDIR /opt/alist/
 COPY --from=builder /app/bin/alist ./
-RUN apk add ca-certificates
+RUN apk add ca-certificates bash
 EXPOSE 5244
 CMD [ "./alist", "server", "--no-prefix" ]
